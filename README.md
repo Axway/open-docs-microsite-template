@@ -82,7 +82,7 @@ Create a new site from your microsite repo in Netlify:
 7. Back in the Netlify window, verify that your newly created microsite repository is on the list, and click to select it.
 8. Select **Open docs team** as Owner, select **master** as branch to deploy. Do not change the **Basic** or **Advanced** build settings. Click **Deploy site**.
 
-The site is now deployed on a random URL. To change the URL click **Site settings > Change site name** and enter a name in the format `MYPROJECT-open-docs`. The site will now be available on the URL <https://MYPROJECT-open-docs.netlify.app/>.
+The site is now deployed on a random URL. To change the URL click **Site settings > Change site name** and enter a name in the format `MYPROJECT-open-docs`. The site will now be available on the URL `https://MYPROJECT-open-docs.netlify.app/`.
 
 ### Customize the site to use your Github repo
 
@@ -94,9 +94,9 @@ github_repo = "https://github.com/Axway/MYPROJECT-open-docs"
 
 ### Customize the site to use your Netlify CMS instance
 
-Make the following changes to get the **Edit on Netlify CMS** links on each page to link to the correct Netlify CMS app. The Netlify CMS app is available by default on the URL  <https://MYPROJECT-open-docs.netlify.app/admin/>.
+Make the following changes to get the **Edit on Netlify CMS** links on each page to link to the correct Netlify CMS app. The Netlify CMS app is available by default on the URL  `https://MYPROJECT-open-docs.netlify.app/admin/`.
 
-**Note these steps are still TBC**
+**NOTE these steps are still TBC**
 
 #### Change baseURL in `config.toml` to the URL of your microsite
 
@@ -115,13 +115,6 @@ repo: 'Axway/MYPROJECT-open-docs', //Path to your GitHub repository.
 ...
 site_url: 'https://MYPROJECT-open-docs.netlify.app/', //URL to netlify site
 ```
-
-
-#### Update the Netlify CMS collections configuration for your documentation
-
-When your documentation hierarchy is defined you will need to update the `collections` variable in `static/admin/config.js`.
-
-For more info, see [Add new documentation to Netlify CMS](https://axway-open-docs.netlify.app/docs/contribution_guidelines/maintain_customize/#add-new-documentation-to-netlify-cms).
 
 #### Add the Axway GitHub OAuth app to your microsite
 
@@ -148,6 +141,12 @@ When working with the content it can be useful to read the following Docsy docum
 ### Customize the microsite landing page
 
 The landing page for the microsite is a HTML page `content/en/_index.html` and uses Docsy content blocks. You must modify this page to create your own blocks and link to your own content.
+
+### Update the Netlify CMS collections configuration for your documentation
+
+After you have replaced the placeholder content with your documentation content, you must update the `collections` variable in `static/admin/config.js` so that Netlify CMS shows one collection for each folder under `content\en\docs`.
+
+For more information, see [Add new documentation to Netlify CMS](https://axway-open-docs.netlify.app/docs/contribution_guidelines/maintain_customize/#add-new-documentation-to-netlify-cms).
 
 ### Customize your Git repo for your way of working
 
