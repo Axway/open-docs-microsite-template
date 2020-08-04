@@ -86,7 +86,7 @@ The site is now deployed on a random URL. To change the URL click **Site setting
 
 ### Customize the site to use your Github repo
 
-Change the `github_repo` parameter in config.toml to point to your project repo as this is used by Hugo/Docsy to generate the GitHub edit links on each page. For example:
+Change the `github_repo` parameter in `config.toml` to point to your project repo as this is used by Hugo/Docsy to generate the GitHub edit links on each page. For example:
 
 ```
 github_repo = "https://github.com/Axway/MYPROJECT-open-docs"
@@ -94,14 +94,45 @@ github_repo = "https://github.com/Axway/MYPROJECT-open-docs"
 
 ### Customize the site to use your Netlify CMS instance
 
-Make the necessary changes to get the **Edit on Netlify CMS** links to work correctly.
+Make the following changes to get the **Edit on Netlify CMS** links on each page to link to the correct Netlify CMS app. The Netlify CMS app is available by default on the URL  <https://MYPROJECT-open-docs.netlify.app/admin/>.
 
-**TBC but might include**:
+**Note these steps are still TBC**
 
-* Change base URL in `config.toml` to the URL of your microsite?
-* Change `repo` and `site url` in `config.js` to point to your repo/microsite?
-* Update the collections in `config.js` to match your docs
-* Add the axway-open-docs GitHub Oauth provider client and secret to the microsite settings in Netlify (under **Access control > Oauth**).
+#### Change baseURL in `config.toml` to the URL of your microsite
+
+Change the `baseURL` in `config.toml`:
+
+```
+baseURL = "https://MYPROJECT-open-docs.netlify.app/"
+```
+
+#### Update the Netlify CMS configuration for your repository and microsite
+
+Change `repo` and `site_url` in `static/admin/config.js` to point to your GitHub repo and your microsite.
+
+```
+repo: 'Axway/MYPROJECT-open-docs', //Path to your GitHub repository.
+...
+site_url: 'https://MYPROJECT-open-docs.netlify.app/', //URL to netlify site
+```
+
+
+#### Update the Netlify CMS collections configuration for your documentation
+
+When your documentation hierarchy is defined you will need to update the `collections` variable in `static/admin/config.js`.
+
+For more info, see [Add new documentation to Netlify CMS](https://axway-open-docs.netlify.app/docs/contribution_guidelines/maintain_customize/#add-new-documentation-to-netlify-cms).
+
+#### Add the Axway GitHub OAuth app to your microsite
+
+To enable users to log in to Netlify CMS with their GitHub accounts, you must add the Axway OAuth authentication provider to the microsite. 
+
+1. Log in to [OpenDocs Netlify account](https://app.netlify.com/teams/opendocs/sites).
+2. Click your microsite.
+3. Go to **Settings > Access control > OAuth**.
+4. Click **Install provider**.
+5. Select **GitHub** as the provider and enter the client ID and secret from [this internal Confluence page](https://techweb.axway.com/confluence/display/RDAPI/Open+docs+quick+reference#Opendocsquickreference-OAuthproviderdetailsforNetlifyCMS).
+6. Click **Install**.
 
 ### Customize the content for your project
 
