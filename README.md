@@ -141,7 +141,7 @@ It is best to use a squash merging strategy in public projects with external con
 
 To enable squash merging, select the **Allow squash merging** checkbox and deselect the other options under **Settings > Options > Merge button**. When using this option it is best to also enable the linear history requirement on any protected branches.
 
-You can also enabel **Automatically delete head branches** to keep your branch list clean.
+You can also enable **Automatically delete head branches** to keep your branch list clean.
 
 #### Branching strategy
 
