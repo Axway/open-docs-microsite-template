@@ -131,7 +131,7 @@ To enable users to log in to Netlify CMS with their GitHub accounts, you must ad
 
 When this is complete, test the **Edit on Netlify CMS** links on your microsite and verify that they link to the CMS instance for your microsite. You should see someting like this:
 
-![Netlify CMS editor](/static/Images/netlifycms_editor.png)
+![Netlify CMS editor](/static/Images/netlifycms_editor.jpg)
 
 ### Customize the content for your project
 
