@@ -82,11 +82,9 @@ Create a new site from your microsite repo in Netlify:
 7. Back in the Netlify window, verify that your newly created microsite repository is on the list, and click to select it.
 8. Select **Open docs team** as Owner, select **master** as branch to deploy. Do not change the **Basic** or **Advanced** build settings. Click **Deploy site**.
 
-The site is now deployed on a random URL. 
+The site is now deployed on a random URL. To change the URL click **Site settings > Change site name** and enter a name in the format `MYPROJECT-open-docs`. The site will now be available on the URL `https://MYPROJECT-open-docs.netlify.app/`.
 
-To change the URL click **Site settings > Change site name** and enter a name in the format `MYPROJECT-open-docs`. The site will now be available on the URL `https://MYPROJECT-open-docs.netlify.app/`.
-
-You can enable the Netlify deploy preview comment for pull requests at once. Still on the site settings, on the left menu click **Build & deploy** > **Deploy notifications**, and verify that 'Add Deploy Preview notifications as pull request comments when Deploy Preview succeeds' is on the list. If not, add it by clicking **Add notification**.
+You can enable the Netlify deploy preview comment for pull requests at once. Still on the site settings, on the left menu click **Build & deploy** > **Deploy notifications**, and verify that 'Add Deploy Preview notifications as pull request comments when Deploy Preview succeeds' is on the list. If it isn't, add it by clicking **Add notification**.
 
 ### Customize the site to use your Github repo and test the GitHub edit links
 
