@@ -226,9 +226,10 @@ Here is an example of the redirects added for AMPLIFY Shared Services:
   headers = {X-From = "Netlify"}
 ```
 
-For image redirects:
+Here is an example of a redirect for images:
 
 ```
+[[redirects]]
   from = "/Images/streams/*"
   to = "https://amplifystreams-open-docs.netlify.app/Images/streams/:splat"
   status = 200
