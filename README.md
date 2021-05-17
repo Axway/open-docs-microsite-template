@@ -256,10 +256,10 @@ You can set up your Git repo in whatever way works best for your team and your p
 
 #### Configure Dependabot alerts and security updates
 
-You must configure dependabot alerts and security updates for your microsite repository. GitHub's Dependabot will create pull requests, alerts, and send email notifications when a dependency needs to be upgraded in your project because a dependency has introduced a security risk.
+You must configure dependabot alerts and security updates for your microsite repository. GitHub's Dependabot creates pull requests, alerts, and sends email notifications when a dependency needs to be upgraded in your project because a dependency has introduced a security risk.
 1. In your GitHub microsite project, click **Settings**.
 2. Click **Security & analysis**.
-3. Enable **Dependabot alerts** and **Dependabot security updates**. The button next to the setting will say **Disable** when enabled.
+3. Enable **Dependabot alerts** and **Dependabot security updates**. The button next to the setting says **Disable** when enabled.
 4. Click **Save changes**.
 
 
