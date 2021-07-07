@@ -73,14 +73,13 @@ Create a new site from your microsite repo in Netlify:
 1. Log in to [OpenDocs Netlify account](https://app.netlify.com/teams/opendocs/sites).
 2. Click **New site from Git**.
 3. Click **GitHub**. You'll be asked to authorize Netlify to your account.
-4. On the **Create a new site** dialog, select the **Axway** GitHub organization and click **Configure the Netlify app on GitHub**.
+4. On the **Create a new site** dialog, select the **Axway** GitHub organization and then, select your GitHub repo from the list or search for it.
 
-    ![Add site to Netlify](/static/Images/netlify_add_site.png)
+    ![Select GitHub repo](/static/Images/netlify_select_repo.png)
 
-5. On the **Install Netlify** dialog, select **Axway** to expand it.
-6. On the **Update Netlify's repository access** dialog, select the Axway org and the microsite repository you created earlier and click **Update access** to give Netlify access. Be careful not to deselect or remove any repositories that already have the Netlify app installed!
-7. Back in the Netlify window, verify that your newly created microsite repository is on the list, and click to select it.
-8. Select **Open docs team** as Owner, select **master** as branch to deploy. Do not change the **Basic** or **Advanced** build settings. Click **Deploy site**.
+5. The **Create a new site** for your GitHub repo page appears with a list of site settings. Leave the default settings (**Open docs team** as Owner, **master** as branch to deploy, build command `cd themes/docsy && git submodule update -f --init && cd ../.. && hugo.` and publish directory is **public**), and then click **Deploy site**.
+
+    ![Add site to Netlify](/static/Images/netlify_deploy_site.png)
 
 The site is now deployed on a random URL. To change the URL click **Site settings > Change site name** and enter a name in the format `MYPROJECT-open-docs`. The site will now be available on the URL `https://MYPROJECT-open-docs.netlify.app/`.
 
@@ -274,13 +273,13 @@ You must add rules to protect the `master` branch:
 
 ![Branch protections](/static/Images/microsite_github_protections.png)
 
-After you '[Configure the Netlify app on GitHub](#create-a-new-netlify-microsite)', this makes available a list of Netlify checks that you can add to your branch's protection rules. In addition to enabling the **Axway CLA** and **Markdown linter** rules, you can also enable:
+After you completed the steps to '[Configure the Netlify app on GitHub](#create-a-new-netlify-microsite)', a list of Netlify checks that you can add to your branch's protection rules were added as available options in your GitHub repo. In addition to enabling the **Axway CLA** and **Markdown linter** rules, you can also enable:
 
 * Header rules
 * Pages changed
 * Redirect rules
 * Mixed content
-* deploy/netlify (This rule is dependent on adding the **Add Deploy Preview notifications to commits when Deploy Preview succeeds** notification in Netlify, which you completed in the '[Add deploy preview as comment to pull requests](#add-deploy-preview-as-comment-to-pull-requests)' section. If you don't add this notification, this status will block the pull request and the list of checks won't pass.
+* deploy/netlify (this rule is dependent on adding the **Add Deploy Preview notifications to commits when Deploy Preview succeeds** notification in Netlify, which you completed in the '[Add deploy preview as comment to pull requests](#add-deploy-preview-as-comment-to-pull-requests)' section. If you don't add this notification, this status will block the pull request, the list of checks won't pass.
 
 #### Markdown linting
 
