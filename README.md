@@ -73,7 +73,7 @@ Create a new site from your microsite repo in Netlify:
 1. Log in to [OpenDocs Netlify account](https://app.netlify.com/teams/opendocs/sites).
 2. Click **New site from Git**.
 3. Click **GitHub**. You'll be asked to authorize Netlify to your account.
-4. On the **Create a new site** dialog, select the **Axway** GitHub organization select Configure the Netlify app on GitHub.
+4. On the **Create a new site** dialog, select the **Axway** GitHub organization, and then select **Configure the Netlify app on GitHub**.
 
     ![Select GitHub repo](/static/Images/netlify_select_repo.png)
 
@@ -272,7 +272,7 @@ You must configure dependabot alerts and security updates for your microsite rep
 
 You must add rules to protect the `master` branch:
 
-* Type the branch name pattern `mater` 
+* Type the branch name pattern `master` 
 * It must require pull request reviews before merging (at least 1 review from a technical writer or doc owner)
 * It must require status checks to pass before merging. The following status checks must be enabled:
   * Axway CLA
